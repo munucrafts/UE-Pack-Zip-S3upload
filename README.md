@@ -4,4 +4,4 @@ Overview - This batch script lets you package your unreal project with your desi
 
 Prerequisites - Windows operating system and 7-Zip for the Zipping process.
 
-How to Run - Double-click on the "pack-Zip-unreal-project.bat" file.
+How to Run - Double-click on the "pack-zip-unreal-project.bat" file.
