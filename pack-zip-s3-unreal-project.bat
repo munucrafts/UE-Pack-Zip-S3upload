@@ -9,6 +9,7 @@ set "PROJECT_RELEASE_VERSION=ProjectReleaseVersion"
 set "MAPS=Map1+Map2+Map3"
 set "PROJECT_PATH=ProjectPath"
 set "PACKAGE_PATH=PackagePath"
+set "S3_PATH=S3Path"
 
 
 
@@ -33,6 +34,16 @@ echo %PROJECT_NAME% Zipping Completed.
 
 
 
+@REM Install AWS Cli if Not Already Installed. You need this to upload a file to S3.
+call configure-aws-cli.bat
 
+
+
+@REM Uploading the Project to S3.
+:UploadToS3
+echo %PROJECT_NAME% Upload to S3 Begins.
+aws s3 cp "%ZIP_PATH%" "%S3_PATH%"
+echo %PROJECT_NAME% Upload to S3 Completed.
+goto :eof
 
 
